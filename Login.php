@@ -1,0 +1,130 @@
+<!-- /* Les Music - Modern Web App Style */ -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GEMA MUSIC</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, orange 60%, #222 100%);
+            min-height: 100vh;
+        }
+        .wrapper {
+            max-width: 400px;
+            margin: 80px auto 40px auto;
+            padding: 30px 25px;
+            background: rgba(255,255,255,0.95);
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+            position: relative;
+            z-index: 2;
+        }
+        .input-box input {
+            background: #222;
+            color: #fff;
+            border: none;
+        }
+        .input-box input::placeholder {
+            color: #bbb;
+        }
+        .input-box {
+            margin-bottom: 15px;
+        }
+        .btn {
+            width: 100%;
+            background: #222;
+            color: #fff;
+            border: none;
+            transition: background 0.2s;
+        }
+        .btn:hover {
+            background: orange;
+            color: #222;
+        }
+        .register-link {
+            margin-top: 15px;
+            text-align: center;
+        }
+        .register-link a {
+            color: orange;
+            text-decoration: none;
+        }
+        .register-link a:hover {
+            text-decoration: underline;
+        }
+        .remember-forgot {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        /* Animasi alat musik (gitar) */
+        .music-anim {
+            position: absolute;
+            left: 50%;
+            top: -90px;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 120px;
+            z-index: 3;
+            animation: floatGuitar 2.5s ease-in-out infinite alternate;
+        }
+        @keyframes floatGuitar {
+            0% { transform: translateX(-50%) translateY(0) rotate(-8deg);}
+            100% { transform: translateX(-50%) translateY(18px) rotate(8deg);}
+        }
+        @media (max-width: 500px) {
+            .wrapper { margin: 40px 8px; }
+            .music-anim { width: 80px; height: 80px; top: -60px; }
+        }
+    </style>
+</head>
+<body>
+        </div>
+        <form action="" method="post">
+            <h1 class="mb-4 text-center" style="color:#222;">Gema Music</h1>
+            <div class="input-box">
+                <input type="text" class="form-control" placeholder="Username" name="username" required>
+            </div>
+            <div class="input-box">
+                <input type="password" class="form-control" placeholder="Password" name="password" required>
+            </div>
+            <div class="remember-forgot">
+                <label style="color:#222;"><input type="checkbox" name="remember"> Ingat Saya</label>
+                <a href="#" style="color:orange;">Lupa Password?</a>
+            </div>
+            <button type="submit" class="btn">Login</button>
+            <div class="register-link">
+                Belum punya akun? <a href="#">Daftar Sekarang</a>
+            </div>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.querySelector('form');
+            form.addEventListener('submit', function (e) {
+                const username = form.username.value.trim();
+                const password = form.password.value.trim();
+                if (!username || !password) {
+                    e.preventDefault();
+                    alert('Username dan Password harus diisi!');
+                }
+            });
+
+            // Animasi sederhana pada form saat halaman dimuat
+            const wrapper = document.querySelector('.wrapper');
+            wrapper.style.opacity = 0;
+            wrapper.style.transform = 'translateY(30px)';
+            setTimeout(() => {
+                wrapper.style.transition = 'all 0.7s cubic-bezier(.68,-0.55,.27,1.55)';
+                wrapper.style.opacity = 1;
+                wrapper.style.transform = 'translateY(0)';
+            }, 200);
+        });
+    </script>
+</body>
+</html>

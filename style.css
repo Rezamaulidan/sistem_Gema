@@ -1,0 +1,90 @@
+/* Les Musik Theme CSS */
+
+body {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #f9a202;
+    font-family: 'Montserrat', 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #0f3460;
+    padding: 24px 0;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    color: #e94560;
+    margin: 0;
+    font-family: 'Rock Salt', cursive, sans-serif;
+}
+
+nav {
+    margin-top: 16px;
+}
+
+nav a {
+    color: #f6fe02;
+    text-decoration: none;
+    margin: 0 18px;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: #e94560;
+}
+
+.main-content {
+    max-width: 900px;
+    margin: 40px auto;
+    background: rgba(22, 33, 62, 0.95);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+    padding: 32px;
+}
+
+h2, h3 {
+    color: #e94560;
+    margin-top: 0;
+}
+
+.button {
+    background: #e94560;
+    color: #ffffff9c;
+    border: none;
+    padding: 12px 32px;
+    border-radius: 24px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(233,69,96,0.2);
+    transition: background 0.2s;
+}
+
+.button:hover {
+    background: #0f3460;
+    color: #e94560;
+}
+
+.music-note {
+    display: inline-block;
+    font-size: 2rem;
+    color: #e94560;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .main-content {
+        padding: 16px;
+    }
+    header h1 {
+        font-size: 1.5rem;
+    }
+}
